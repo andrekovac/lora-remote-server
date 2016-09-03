@@ -1,6 +1,6 @@
 version: '2'
 services:
-  clairecut-server:
+  lora-server:
     ports:
       - "80:5000"
     build: .

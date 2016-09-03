@@ -1,8 +1,5 @@
 FROM ubuntu:14.04
 
-# To mute debconf messages (see https://github.com/phusion/baseimage-docker/issues/58)
-RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
-
 # Update and install some command-line tools + python plus required packages
 # TODO: Remove unnecessary tools
 RUN apt-get update && apt-get install -y \
