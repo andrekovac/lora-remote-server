@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 
 # Update and install some command-line tools + python plus required packages
 # TODO: Remove unnecessary tools
-RUN apt-get update && apt-get install -y \
+RUN sudo apt-get update && sudo apt-get install -y \
     build-essential \
     cmake \
     curl \
@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
     tar \
     vim \
     wget \
-&& pip install Flask tweepy
+&& sudo pip install Flask tweepy
 
 
 ## If server was build once already, just comment all above this line and uncomment the line below
